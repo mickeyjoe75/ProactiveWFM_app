@@ -1,6 +1,6 @@
 # Workforce Management app
 
-Repo for the SmartBudget app created for the Ruby project in Codeclan
+Repo for the # Workforce Management app created for the Ruby project in Codeclan
 
 
 Programming & Web Fundamentals
