@@ -1,4 +1,5 @@
-# SmartBudget_app
+# Workforce Management app
+
 Repo for the SmartBudget app created for the Ruby project in Codeclan
 
 
@@ -10,19 +11,23 @@ TDD (where appropriate)
 OOP
 Web Programming ( REST/MVC )
 Databases with CRUD actions
-MoneyCashboard
-You want to start tracking your spending in an attempt to be more frugal with money. You have decided to make a budgeting app to help you see where all of your money is being spent.
 
-You must be able to create new Transactions ( which should include a merchant name, e.g. Tesco, and a value ) which have an associated Tag (e.g. 'food', 'clothes'). Your app would then be able to track a total, and display this in a view.
+# Workforce Management app- ProactiveWFM_app
 
-MVP:
-Create new transactions
-Display a list of all transactions
-Display total amount spent
-Display total amount spent by tag
-Possible Extensions:
-CRUD actions for the transactions
-Show a warning when the total expenditure is over budget (set a hard coded budget first)
-Add a date to the transactions and view total spending by month
-Any other ideas you might come up with
+You have been tasked to build a workforce managment app to help with schedling and human resource managment of Contact Centre. You have decided to make a WFM app to help with the rostering and scheduling for the contact centre.
 
+You must be able to create new Employees ( which should include a team name, e.g. Thames, Start date, Contracted working hours, Shift patterns, Shift duration, Break times et.) which have an associated Employee Group (e.g. 'Call advisors', 'Supervisors'). Your app would then be able to track total shift hours per team, and display this in a view.
+
+### MVP:
+
+- Create new Employees,teams,shifts
+- Display a list of all Employees,teams, shifts
+- Display total contracted hours per Employee,team
+- Display total Contracted and shift hours  by Employee Groups
+
+### Possible Extensions:
+
+- CRUD actions for the Employee records
+- Show a warning when the shift hours for an employee is less that the contracted hours
+- show Weekly employee shift patterns by team
+- Any other ideas you might come up with
