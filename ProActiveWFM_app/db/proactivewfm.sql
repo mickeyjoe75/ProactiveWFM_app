@@ -1,10 +1,10 @@
-/* DROP TABLE locations;
+DROP TABLE locations;
 DROP TABLE organisations;
 DROP TABLE departments;
 DROP TABLE teams;
 DROP TABLE jobTitles;
 DROP TABLE employees;
-DROP TABLE shifts; */
+DROP TABLE shifts;
 
 CREATE TABLE locations (
   id SERIAL8 PRIMARY KEY,
@@ -28,7 +28,8 @@ CREATE TABLE teams (
 
 CREATE TABLE jobTitles (
   id SERIAL8 PRIMARY KEY,
-  name VARCHAR(255) NOT NULL
+  title VARCHAR(255) NOT NULL,
+  isSupervisor BOOLEAN
 );
 
 CREATE TABLE employees (
