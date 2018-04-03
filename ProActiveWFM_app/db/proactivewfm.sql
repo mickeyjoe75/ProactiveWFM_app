@@ -2,7 +2,7 @@ DROP TABLE locations;
 DROP TABLE organisations;
 DROP TABLE departments;
 DROP TABLE teams;
-DROP TABLE jobTitles;
+DROP TABLE jobtitles;
 DROP TABLE employees;
 DROP TABLE shifts;
 
@@ -26,10 +26,10 @@ CREATE TABLE teams (
   name VARCHAR(255) NOT NULL UNIQUE
 );
 
-CREATE TABLE jobTitles (
+CREATE TABLE jobtitles (
   id SERIAL8 PRIMARY KEY,
   title VARCHAR(255) NOT NULL UNIQUE,
-  isSupervisor BOOLEAN
+  supervisor BOOLEAN
 );
 
 CREATE TABLE employees (
