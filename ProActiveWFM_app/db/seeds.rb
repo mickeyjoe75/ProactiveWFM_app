@@ -4,6 +4,7 @@ require_relative("../models/department.rb" )
 require_relative("../models/team.rb" )
 require_relative("../models/jobtitle.rb" )
 require_relative("../models/employee.rb" )
+require_relative("../models/shift.rb" )
 require("pry-byebug")
 
 
@@ -13,6 +14,7 @@ Department.delete_all()
 Team.delete_all()
 Jobtitle.delete_all()
 Employee.delete_all()
+Shift.delete_all()
 
 
 location1 = Location.new({
@@ -88,3 +90,17 @@ location1 = Location.new({
   })
 
   employee1.save()
+
+
+  shift1 = Shift.new({
+    "label" => "FT-Early",
+    "shiftDate" => '01/01/2018',
+    "shiftStartTime" => '08:00',
+    "shiftEndTime" => '16:00',
+    "shiftDuration" => 8,
+    "breakStartTime" => '12:00',
+    "breakEndTime" => '12:30',
+    "breakDuration" => 0.5
+  })
+
+  shift1.save()
