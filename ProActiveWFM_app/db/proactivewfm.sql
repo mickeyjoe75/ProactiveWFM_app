@@ -1,9 +1,9 @@
+DROP TABLE employees;
 DROP TABLE locations;
 DROP TABLE campaigns;
 DROP TABLE departments;
 DROP TABLE teams;
 DROP TABLE jobtitles;
-DROP TABLE employees;
 DROP TABLE shifts;
 
 CREATE TABLE locations (
@@ -32,22 +32,6 @@ CREATE TABLE jobtitles (
   supervisor BOOLEAN NOT NULL
 );
 
-CREATE TABLE employees (
-  id SERIAL8 PRIMARY KEY,
-  firstName VARCHAR(255) NOT NULL,
-  surName VARCHAR(255) NOT NULL,
-  email VARCHAR(80),
-  contractedHrs DECIMAL,
-  startDate DATE,
-  dateOfBirth DATE,
-  locationId INT4,
-  campaignId INT4,
-  departmentId INT4,
-  teamId INT4,
-  jobtitleId INT4,
-  shiftId INT4
-);
-
 CREATE TABLE shifts (
   id SERIAL8 PRIMARY KEY,
   label VARCHAR(255) NOT NULL UNIQUE,
@@ -58,4 +42,20 @@ CREATE TABLE shifts (
   breakStartTime TIME,
   breakEndTime TIME,
   breakDuration DECIMAL
+);
+
+CREATE TABLE employees (
+  id SERIAL8 PRIMARY KEY,
+  firstName VARCHAR(255) NOT NULL,
+  surName VARCHAR(255) NOT NULL,
+  email VARCHAR(80),
+  contractedHrs DECIMAL,
+  startDate DATE,
+  dateOfBirth DATE,
+  locationId INT4 REFERENCES locations(id),
+  campaignId INT4 REFERENCES campaigns(id),
+  departmentId INT4 REFERENCES departments(id),
+  teamId INT4 REFERENCES teams(id),
+  jobtitleId INT4 REFERENCES jobtitles(id),
+  shiftId INT4 REFERENCES shifts(id)
 );
