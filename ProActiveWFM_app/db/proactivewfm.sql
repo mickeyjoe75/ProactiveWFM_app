@@ -1,5 +1,5 @@
 DROP TABLE locations;
-DROP TABLE organisations;
+DROP TABLE campaigns;
 DROP TABLE departments;
 DROP TABLE teams;
 DROP TABLE jobtitles;
@@ -11,7 +11,7 @@ CREATE TABLE locations (
   name VARCHAR(255) NOT NULL UNIQUE
 );
 
-CREATE TABLE organisations (
+CREATE TABLE campaigns (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255) NOT NULL UNIQUE
 );
@@ -29,7 +29,7 @@ CREATE TABLE teams (
 CREATE TABLE jobtitles (
   id SERIAL8 PRIMARY KEY,
   title VARCHAR(255) NOT NULL UNIQUE,
-  supervisor BOOLEAN
+  supervisor BOOLEAN NOT NULL
 );
 
 CREATE TABLE employees (
@@ -41,7 +41,7 @@ CREATE TABLE employees (
   startDate DATE,
   dateOfBirth DATE,
   locationId INT4,
-  organisationId INT4,
+  campaignId INT4,
   departmentId INT4,
   teamId INT4,
   jobtitleId INT4,

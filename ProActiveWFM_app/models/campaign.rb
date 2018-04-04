@@ -1,6 +1,6 @@
 require_relative( '../db/sql_runner' )
 
-class Organisation
+class Campaign
 
   attr_reader( :name, :id)
 
@@ -10,7 +10,7 @@ class Organisation
   end
 
   def save()
-    sql = "INSERT INTO organisations
+    sql = "INSERT INTO campaigns
     (
       name
     )
@@ -25,7 +25,7 @@ class Organisation
   end
 
   def self.delete_all()
-    sql = "DELETE FROM organisations"
+    sql = "DELETE FROM campaigns"
     SqlRunner.run( sql )
   end
 

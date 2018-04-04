@@ -1,5 +1,5 @@
 require_relative("../models/location.rb" )
-require_relative("../models/organisation.rb" )
+require_relative("../models/campaign.rb" )
 require_relative("../models/department.rb" )
 require_relative("../models/team.rb" )
 require_relative("../models/jobtitle.rb" )
@@ -7,7 +7,7 @@ require("pry-byebug")
 
 
 Location.delete_all()
-Organisation.delete_all()
+Campaign.delete_all()
 Department.delete_all()
 Team.delete_all()
 
@@ -23,17 +23,17 @@ location1 = Location.new({
 
   location2.save()
 
-  organisation1 = Organisation.new({
+  campaign1 = Campaign.new({
     "name" => "Scottish Gas"
   })
 
-  organisation1.save()
+  campaign1.save()
 
-  organisation2 = Organisation.new({
+  campaign2 = Campaign.new({
     "name" => "Barclays"
   })
 
-  organisation2.save()
+  campaign2.save()
 
   department1 = Department.new({
     "name" => "Customer Service"
