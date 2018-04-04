@@ -29,7 +29,7 @@ class Employee
       $1, $2, $3, $4, $5, $6
     )
     RETURNING id"
-    values = [@id, @firstName, @surName, @email, @contractedHrs, @dateOfBirth, @startDate]
+    values = [@firstName, @surName, @email, @contractedHrs, @dateOfBirth, @startDate]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end

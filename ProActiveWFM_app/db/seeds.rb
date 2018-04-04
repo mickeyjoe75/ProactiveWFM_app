@@ -3,6 +3,7 @@ require_relative("../models/campaign.rb" )
 require_relative("../models/department.rb" )
 require_relative("../models/team.rb" )
 require_relative("../models/jobtitle.rb" )
+require_relative("../models/employee.rb" )
 require("pry-byebug")
 
 
@@ -10,6 +11,9 @@ Location.delete_all()
 Campaign.delete_all()
 Department.delete_all()
 Team.delete_all()
+Jobtitle.delete_all()
+Employee.delete_all()
+
 
 location1 = Location.new({
   "name" => "Edinburgh"
@@ -72,3 +76,15 @@ location1 = Location.new({
   })
 
   jobtitle2.save()
+
+
+  employee1 = Employee.new({
+    "firstName" => "John",
+    "surName" => "Smith",
+    "email" => "john.smith@scottishgas.co.uk",
+    "contractedHrs" => 40,
+    "dateOfBirth" => '01/09/1980',
+    "startDate" => '05/02/2018'
+  })
+
+  employee1.save()
