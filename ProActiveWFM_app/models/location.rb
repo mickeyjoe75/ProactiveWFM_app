@@ -29,6 +29,8 @@ class Location
     SqlRunner.run( sql )
   end
 
+  
+
 
 
 
