@@ -1,0 +1,16 @@
+<h1>Team Schedule</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>|</th>
+    <th>Shift</th>
+  </tr>
+  <% @employees.each do |employee| %>
+  <tr>
+    <td> <%= employee.full_name %> </td>
+    <td>|</td>
+
+  </tr>
+  <% end %>
+</table>

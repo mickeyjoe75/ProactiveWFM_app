@@ -1,0 +1,9 @@
+<h1>Agent <%= @employee.full_name %></h1>
+
+<h3>Shift Detal:</h3>
+
+<ul>
+  <% @employee.shifts.each do |shift| %>
+  <li><%= shift.label %></li>
+  <% end %>
+</ul>

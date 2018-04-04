@@ -7,10 +7,10 @@ require_relative( '../models/department.rb' )
 require_relative( '../models/team.rb' )
 require_relative( '../models/jobtitle.rb' )
 
-get '/bitings' do
-  @bitings = Biting.all
-  @actions = Action.all
-  erb ( :"bitings/index" )
+get '/admin' do
+  # @location = Location.all
+  # @campaign = Campaign.all
+  erb ( :"admin/index" )
 end
 #
 # get '/bitings/new' do
