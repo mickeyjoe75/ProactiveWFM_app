@@ -7,11 +7,23 @@ require_relative( '../models/department.rb' )
 require_relative( '../models/team.rb' )
 require_relative( '../models/jobtitle.rb' )
 
+
+
+
 get '/admin' do
-  # @location = Location.all
+  @location = Location.all
   # @campaign = Campaign.all
   erb ( :"admin/index" )
 end
+
+post '/admin' do
+  location = Location.new(params)
+  loacaion.save
+  redirect to("/employees")
+end
+
+
+
 #
 # get '/bitings/new' do
 #   @victims = Victim.all

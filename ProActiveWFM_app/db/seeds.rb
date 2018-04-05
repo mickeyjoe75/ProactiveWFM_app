@@ -91,6 +91,31 @@ location1 = Location.new({
 
   employee1.save()
 
+  employee2 = Employee.new({
+    "firstName" => "Daniel",
+    "surName" => "Seaborne",
+    "email" => "daniel.seaborne@scottishgas.co.uk",
+    "contractedHrs" => 40,
+    "dateOfBirth" => '05/02/1982',
+    "startDate" => '05/02/2018'
+  })
+
+  employee2.save()
+
+  employee3 = Employee.new({
+    "firstName" => "Bradley",
+    "surName" => "Scott",
+    "email" => "bradley.scott@scottishgas.co.uk",
+    "contractedHrs" => 40,
+    "dateOfBirth" => '01/05/1978',
+    "startDate" => '05/02/2018'
+  })
+
+  employee3.save()
+
+
+
+
 
   shift1 = Shift.new({
     "label" => "FT-Early",

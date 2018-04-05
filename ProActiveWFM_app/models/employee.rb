@@ -1,48 +1,49 @@
 require_relative( '../db/sql_runner' )
+require('pry')
 
 class Employee
 
-  attr_reader( :id, :firstName, :surName, :email, :contractedHrs, :dateOfBirth, :startDate )
+  attr_reader( :id, :firstname, :surname, :email, :contractedhrs, :dateofbirth, :startdate )
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
-    @firstName = options['firstName']
-    @surName = options['surName']
+    @firstname = options['firstname']
+    @surname = options['surname']
     @email = options['email']
-    @contractedHrs = options['contractedHrs']
-    @dateOfBirth = options['dateOfBirth']
-    @startDate = options['startDate']
+    @contractedHrs = options['contractedhrs']
+    @dateofbirthfBirth = options['dateofbirth']
+    @startdate = options['startdate']
   end
 
   def save()
     sql = "INSERT INTO employees
     (
-      firstName,
-      surName,
+      firstname,
+      surname,
       email,
-      contractedHrs,
-      dateOfBirth,
-      startDate
+      contractedhrs,
+      dateofbirth,
+      startdate
     )
     VALUES
     (
       $1, $2, $3, $4, $5, $6
     )
     RETURNING *"
-    values = [@firstName, @surName, @email, @contractedHrs, @dateOfBirth, @startDate]
+    values = [@firstname, @surname, @email, @contractedhrs, @dateofbirth, @startdate]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
 
   def full_name()
-    return "#{@firstName} #{@surName}"
+    return "#{@firstname} #{@surname}"
   end
 
 
   def self.all()
     sql = "SELECT * FROM employees"
     results = SqlRunner.run( sql )
-    return results.map { |emp| Employee.new( emp ) }
+    return results.map { |employee| Employee.new( employee ) }
   end
 
   def self.delete_all()
@@ -68,15 +69,7 @@ class Employee
     return results.map { |shift| Shift.new(shift) }
   end
 
-  # def employees()
-  #   sql = "SELECT * FROM employees
-  #     INNER JOIN shifts
-  #     ON employees.shiftId = shifts.id
-  #     WHERE employees.id = $1;"
-  #   values = [@id]
-  #   results = SqlRunner.run(sql, values)
-  #   return results.map { |emp| Employee.new(emp) }
-  # end
+
 
 
 

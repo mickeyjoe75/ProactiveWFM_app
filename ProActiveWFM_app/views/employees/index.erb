@@ -1,16 +1,8 @@
 <h1>Team Schedule</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>|</th>
-    <th>Shift</th>
-  </tr>
-  <% @employees.each do |employee| %>
-  <tr>
-    <td> <%= employee.full_name %> </td>
-    <td>|</td>
-
-  </tr>
-  <% end %>
-</table>
+<% @employees.each do |employee| %>
+  <p>Name: <%= employee.full_name() %></p>
+  <p>Contracted Hrs: <%= employee.contractedHrs %></p>
+  <p><a href="/employees/<%= employee.id %>">Show Agent Details</a></p>
+  <hr/>
+<% end %>

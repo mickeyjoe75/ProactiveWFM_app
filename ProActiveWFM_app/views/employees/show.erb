@@ -1,9 +1,8 @@
-<h1>Agent <%= @employee.full_name %></h1>
+<h1>Agent</h1>
 
-<h3>Shift Detal:</h3>
-
-<ul>
-  <% @employee.shifts.each do |shift| %>
-  <li><%= shift.label %></li>
-  <% end %>
-</ul>
+<% @employees.each do |employee| %>
+  <p>Name: <%= employee.full_name() %></p>
+  <p>Contracted Hrs: <%= employee.contractedHrs %></p>
+  <p><a href="/employees/<%= employee.id %>">Show Agent Details</a></p>
+  <hr/>
+<% end %>
