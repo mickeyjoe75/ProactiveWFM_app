@@ -62,7 +62,7 @@ class Employee
   def shifts()
     sql = "SELECT * FROM shifts
       INNER JOIN employees
-      ON employees.shiftId = shifts.id
+      ON employees.shiftid = shifts.id
       WHERE employees.id = $1;"
     values = [@id]
     results = SqlRunner.run(sql, values)

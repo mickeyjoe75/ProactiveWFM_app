@@ -4,7 +4,7 @@ require_relative( '../models/employee.rb' )
 require_relative( '../models/shift.rb' )
 require('pry')
 
-# view showing emplyee Schedules
+# add new employees
 
 get '/employees/new' do
   @employees = Employee.all()

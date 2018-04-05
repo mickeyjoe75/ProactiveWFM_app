@@ -35,27 +35,27 @@ CREATE TABLE jobtitles (
 CREATE TABLE shifts (
   id SERIAL8 PRIMARY KEY,
   label VARCHAR(255) NOT NULL UNIQUE,
-  shiftDate DATE,
-  shiftStartTime TIME,
-  shiftEndTime TIME,
-  shiftDuration DECIMAL,
-  breakStartTime TIME,
-  breakEndTime TIME,
-  breakDuration DECIMAL
+  shiftdate DATE,
+  shiftstarttime TIME,
+  shiftendtime TIME,
+  shiftduration DECIMAL,
+  breakstarttime TIME,
+  breakendtime TIME,
+  breakduration DECIMAL
 );
 
 CREATE TABLE employees (
   id SERIAL8 PRIMARY KEY,
-  firstName VARCHAR(255) NOT NULL,
-  surName VARCHAR(255) NOT NULL,
+  firstname VARCHAR(255) NOT NULL,
+  surname VARCHAR(255) NOT NULL,
   email VARCHAR(80),
-  contractedHrs DECIMAL,
-  startDate DATE,
-  dateOfBirth DATE,
-  locationId INT4 REFERENCES locations(id),
-  campaignId INT4 REFERENCES campaigns(id),
-  departmentId INT4 REFERENCES departments(id),
-  teamId INT4 REFERENCES teams(id),
-  jobtitleId INT4 REFERENCES jobtitles(id),
-  shiftId INT4 REFERENCES shifts(id)
+  contractedhrs DECIMAL,
+  dateofbirth DATE,
+  startdate DATE,
+  locationid INT4 REFERENCES locations(id),
+  campaignid INT4 REFERENCES campaigns(id),
+  departmentid INT4 REFERENCES departments(id),
+  teamid INT4 REFERENCES teams(id),
+  jobtitleid INT4 REFERENCES jobtitles(id),
+  shiftid INT4 REFERENCES shifts(id)
 );

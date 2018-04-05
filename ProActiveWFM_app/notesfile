@@ -1,0 +1,125 @@
+
+
+
+def total()
+  return @quantity * @price
+end
+
+
+
+
+
+
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial Balck', cursive;
+  margin: 0px;
+  padding: 0px;
+}
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>|</th>
+    <th>Shift</th>
+  </tr>
+  <% @employees.each do |employee| %>
+  <tr>
+    <td><a href="/employees <%= employee.full_name %>"><%= employee.full_name %></a></td>
+    <td>|</td>
+
+  </tr>
+  <% end %>
+</table>
+
+
+
+<% @orders.each do |order| %>
+  <p>Name: <%= order.pretty_name() %></p>
+  <p>Order: <%= order.quantity %> x <%=
+  order.topping %> </p>
+  <p><a href="/pizza_orders/<%= order.id %>">Show Order</a></p>
+  <hr/>
+<% end %>
+
+
+
+
+
+
+
+<p>All the pizzas!</p>
+
+<% @orders.each do |order| %>
+  <p>Name: <%= order.pretty_name() %></p>
+  <p>Order: <%= order.quantity %> x <%=
+  order.topping %> </p>
+  <p><a href="/pizza_orders/<%= order.id %>">Show Order</a></p>
+  <hr/>
+<% end %>
+
+body {
+  background: magenta url('/images/im_admin.jpg');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: black;
+  font-family: 'Merriweather', serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+div
+ {
+  width: 200px;
+  height: 200px;
+  display: block;
+  position: relative;
+}
+
+div::after {
+  content: "";
+  background: url('/images/im_admin.jpg');
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+body {background:#DDD; padding:2em;
+    display: block;
+    position: relative;
+}
