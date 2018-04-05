@@ -1,16 +1,10 @@
 <h2>Add Location</h2>
-<form method="POST" action="/admin">
-  <div class="form-wrapper">
 
-    <div class="form-el">
-      <label for="name">Location Name:</label>
-      <input type="text" name="name" id="name"/>
-    </div>
-        <% @locations.each do |location| %>
-            <option value=<%= location.id %>><%= location.name %></option>
-        <% end %>
-      </select>
+<form method="post" action="/admin">
+  <label for="name">Location Name:</label>
+  <input id="name" type = "text"
+  name="name" />
 
+  <input type ="submit" value="Add Location" />
 
-  </div>
-</form>
+  </form>
