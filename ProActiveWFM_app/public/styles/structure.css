@@ -1,7 +1,7 @@
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.55),
-                    rgba(0, 0, 0, 0.55)),
-                    url('/images/main_1.png');
+  rgba(0, 0, 0, 0.55)),
+  url('/images/main_1.png');
   background-size: 100%;
   background-color: transparent
   background-repeat: no-repeat;
@@ -12,14 +12,43 @@ body {
   font color: auto;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
 
+
+h1 {
+  font-size: 2.0em;
+  color: darkblue;
+  margin-bottom: 20px;
+  font-size-adjust: auto;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: darkblue;
+  margin-bottom: 20px;
+  font-size-adjust: auto;
+  font-style: oblique;
+}
+
+h3 {
+  font-size: 1.0em;
+  color: black;
+  margin-bottom: 20px;
+  font-size-adjust: auto;
+  font-style: oblique;
+}
 
 
 
 a, a:link, a:visited {
   color: black;
   text-decoration:  underline;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 a:hover, a:active, a:focus {
@@ -33,7 +62,7 @@ nav {
 }
 
 nav ul li {
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   text-transform: uppercase;
   color: black
 }
@@ -46,6 +75,13 @@ ul {
 
 main {
   padding: 25px;
+}
+
+.flex-grid {
+  display: flex;
+}
+.col {
+  flex: 1;
 }
 
 .flex {
