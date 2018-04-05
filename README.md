@@ -12,7 +12,7 @@ OOP
 Web Programming ( REST/MVC )
 Databases with CRUD actions
 
-# Workforce Management app- ProactiveWFM_app
+# Workforce Management app- ProActiveWFM
 
 You have been tasked to build a workforce managment app to help with schedling and human resource managment of Contact Centre. You have decided to make a WFM app to help with the rostering and scheduling for the contact centre.
 
