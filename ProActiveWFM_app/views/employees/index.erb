@@ -1,14 +1,21 @@
 <h1>Employee List</h1>
 
 
-<% @employees.each do |employee| %>
-  <p>Name: <%= employee.full_name() %></p>
-  <p>Contracted Hrs: <%= employee.contractedhrs %></p>
-  <p>Email: <%= employee.email %></p>
-  <p>Date of Birth: <%= employee.dateofbirth %></p>
-  <p>Start Date: <%= employee.startdate %></p>
-  <p>Shift Detail: <%= employee.shifts() %></p>
-
-
-  <hr/>
-<% end %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Contracted Hrs</th>
+    <th>Email</th>
+    <th>Date of Birth</th>
+    <th>Start Date</th>
+  </tr>
+  <% @employees.each do |employee| %>
+  <tr>
+    <td><a href="/employees/show/<%= employee.id %>"><%= employee.full_name() %></a></td>
+    <td><%= employee.contractedhrs %></td>
+    <td><%= employee.email %></td>
+    <td><%= employee.dateofbirth %></td>
+    <td><%= employee.startdate %></td>
+  </tr>
+  <% end %>
+</table>

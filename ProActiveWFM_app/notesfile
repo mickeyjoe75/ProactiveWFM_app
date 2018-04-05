@@ -20,6 +20,22 @@ end
 
 
 
+employee details: as rows:::
+
+<% @employees.each do |employee| %>
+  <p>Name: <%= employee.full_name() %></p>
+  <p>Contracted Hrs: <%= employee.contractedhrs %></p>
+  <p>Email: <%= employee.email %></p>
+  <p>Date of Birth: <%= employee.dateofbirth %></p>
+  <p>Start Date: <%= employee.startdate %></p>
+  <p>Shift Detail: <%= employee.shifts() %></p>
+
+
+  <hr/>
+<% end %>
+
+
+
 
 
 <% @orders.each do |order| %>

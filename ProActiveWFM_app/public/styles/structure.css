@@ -1,7 +1,7 @@
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.55),
   rgba(0, 0, 0, 0.55)),
-  url('/images/main_1.png');
+  url('/images/image_confirm.jpg');
   background-size: 100%;
   background-color: transparent
   background-repeat: no-repeat;
@@ -36,12 +36,50 @@ h2 {
 }
 
 h3 {
-  font-size: 1.0em;
+  font-size: 1.50em;
   color: darkred;
   margin-bottom: 20px;
   font-size-adjust: auto;
   font-style: bold;
 }
+
+h4 {
+  font-size: 3.0em;
+  color: white;
+  margin-bottom: 20px;
+  font-size-adjust: auto;
+  font-style: oblique;
+  text-align: center;
+}
+
+h5 {
+  font-size: 2.2em;
+  color: skyblue;
+  margin-bottom: 20px;
+  font-size-adjust: auto;
+  font-style: bold;
+  text-align: center;
+}
+
+h6 {
+  font-size: 1.1em;
+  color: white;
+  margin-bottom: 20px;
+  font-size-adjust: auto;
+  font-style: italic;
+  text-align: center;
+}
+
+h7 {
+  font-size: 0.8em;
+  color: white;
+  margin-bottom: 20px;
+  font-size-adjust: auto;
+  font-style: italic;
+  text-align: left;
+}
+
+
 
 
 
