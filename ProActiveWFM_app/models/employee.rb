@@ -69,6 +69,17 @@ class Employee
     return results.map { |shift| Shift.new(shift) }
   end
 
+  def team()
+    sql = "SELECT * FROM teams
+      INNER JOIN employees
+      ON employees.shiftid = shifts.id
+      WHERE employees.id = $1;"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |shift| Shift.new(shift) }
+  end
+
+
 
 
 
