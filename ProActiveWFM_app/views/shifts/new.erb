@@ -2,40 +2,50 @@
 
 <h3>Step 2| ADD SHIFT</h3></br></br>
 
-<form method="post" action="/shifts">
-  <label for="label">Shift Label:</label>
-  <input id="label" type = "text"
-  name="label" />
+<p>
+  <form method="post" action="/shifts">
+    <label for="label">Shift Label:</label>
+    <input id="label" type = "text"
+    name="label" />
+  </p></br>
 
-  <label for="shiftdate">Shift Date:</label>
-  <input id="shiftdate" type = "date"
-  name="shiftdate" />
+  <p>
+    <label for="shiftdate">Shift Date:</label>
+    <input id="shiftdate" type = "date"
+    name="shiftdate" />
+  </p></br>
+  <p>
+    <label for="shiftstarttime">Shift Start Time</label>
+    <input id="shiftstarttime" type = "time"
+    name="shiftstarttime" />
+  </p></br>
+  <p>
+    <label for="shiftendtime">Shift End Time</label>
+    <input id="shiftendtime" type = "time"
+    name="shiftendtime" />
+  </p></br>
+  <p>
+    <label for="shiftduration">Shift Length</label>
+    <input id="shiftduration" type = "number" step="any"
+    name="shiftduration" />
+  </p></br>
+<p>
+    <label for="breakstarttime">Break Start Time</label>
+    <input id="breakstarttime" type = "time"
+    name="breakstarttime" />
+  </p></br>
+<p>
+    <label for="breakendtime">Break End Time</label>
+    <input id="breakendtime" type = "time"
+    name="breakendtime" />
+  </p></br>
+<p>
+    <label for="breakduration">Break Length</label>
+    <input id="breakduration" type = "number" step="any"
+    name="breakduration" />
+  </p></br>
 
-  <label for="shiftstarttime">Shift Start Time</label>
-  <input id="shiftstarttime" type = "time"
-  name="shiftstarttime" />
 
-  <label for="shiftendtime">Shift End Time</label>
-  <input id="shiftendtime" type = "time"
-  name="shiftendtime" />
+    <input type ="submit" value="Add Shift" />
 
-  <label for="shiftduration">Shift Length</label>
-  <input id="shiftduration" type = "number" step="any"
-  name="shiftduration" />
-
-  <label for="breakstarttime">Break Start Time</label>
-  <input id="breakstarttime" type = "time"
-  name="breakstarttime" />
-
-  <label for="breakendtime">Break End Time</label>
-  <input id="breakendtime" type = "time"
-  name="breakendtime" />
-
-  <label for="breakduration">Break Length</label>
-  <input id="breakduration" type = "number" step="any"
-  name="breakduration" />
-
-
-  <input type ="submit" value="Add Shift" />
-
-</form>
+  </form>

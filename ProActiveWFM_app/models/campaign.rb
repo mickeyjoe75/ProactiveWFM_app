@@ -35,8 +35,4 @@ class Campaign
     SqlRunner.run( sql )
   end
 
-
-
-
-
 end

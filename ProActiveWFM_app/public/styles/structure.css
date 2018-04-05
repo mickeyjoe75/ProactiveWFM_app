@@ -37,10 +37,10 @@ h2 {
 
 h3 {
   font-size: 1.0em;
-  color: black;
+  color: darkred;
   margin-bottom: 20px;
   font-size-adjust: auto;
-  font-style: oblique;
+  font-style: bold;
 }
 
 
