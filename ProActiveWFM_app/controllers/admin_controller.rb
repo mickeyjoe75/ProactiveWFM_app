@@ -11,13 +11,29 @@ require_relative( '../models/jobtitle.rb' )
 
 
 get '/admin' do
-  @location = Location.all
+    @team = Team.all
+  # @location = Location.all
   # @campaign = Campaign.all
+
   erb ( :"admin/new" )
 end
 
+
 post '/admin' do
-  location = Location.new(params)
-  location.save
+  team = Team.new(params)
+  team.save
   redirect to("/admin")
 end
+
+
+# post '/admin' do
+#   location = Location.new(params)
+#   location.save
+#   redirect to("/admin")
+# end
+
+# post '/admin' do
+#   campaign = Campaign.new(params)
+#   campaign.save
+#   redirect to("/admin")
+# end

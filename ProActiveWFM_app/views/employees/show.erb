@@ -2,7 +2,7 @@
 
 <% @employees.each do |employee| %>
   <p>Name: <%= employee.full_name() %></p>
-  <p>Contracted Hrs: <%= employee.contractedHrs %></p>
+  <p>Contracted Hrs: <%= employee.contractedhrs %></p>
   <p><a href="/employees/<%= employee.id %>">Show Agent Details</a></p>
   <hr/>
 <% end %>

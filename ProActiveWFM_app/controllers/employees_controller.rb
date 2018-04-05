@@ -6,10 +6,19 @@ require('pry')
 
 # view showing emplyee Schedules
 
-get '/employees' do
+get '/employees/new' do
   @employees = Employee.all()
-  erb ( :"employees/index" )
+  erb ( :"employees/new" )
 end
+
+
+post '/employees' do
+  employee = Employee.new(params)
+  employee.save
+    redirect to("/employees/new")
+end
+
+
 
 # get '/employees/:id' do
 #   @employees = Employee.find(params['id'].to_i)

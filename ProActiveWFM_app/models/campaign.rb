@@ -9,6 +9,12 @@ class Campaign
     @name = options['name']
   end
 
+  def self.all()
+    sql = "SELECT * FROM campaigns"
+    results = SqlRunner.run( sql )
+    return results.map { |campaign| Location.new( campaign ) }
+  end
+
   def save()
     sql = "INSERT INTO campaigns
     (

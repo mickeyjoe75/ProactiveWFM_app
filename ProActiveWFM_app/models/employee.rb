@@ -10,8 +10,8 @@ class Employee
     @firstname = options['firstname']
     @surname = options['surname']
     @email = options['email']
-    @contractedHrs = options['contractedhrs']
-    @dateofbirthfBirth = options['dateofbirth']
+    @contractedhrs = options['contractedhrs']
+    @dateofbirth = options['dateofbirth']
     @startdate = options['startdate']
   end
 
