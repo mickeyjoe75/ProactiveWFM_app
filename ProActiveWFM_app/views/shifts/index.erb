@@ -1,0 +1,15 @@
+<h1>Schedule Summary</h1>
+
+
+<% @shifts.each do |shift| %>
+<p>Shift Label: <%= shift.label %></p>
+<p>Shift Date: <%= shift.shiftdate %></p>
+<p>Shift Start Time: <%= shift.shiftstarttime %></p>
+<p>Shift End Time: <%= shift.shiftendtime %></p>
+<p>Shift Length: <%= shift.shiftduration %></p>
+<p>Break Start Time: <%= shift.breakstarttime %></p>
+<p>Break End Time: <%= shift.breakendtime %></p>
+<p>Break Length: <%= shift.breakduration %></p>
+
+<hr/>
+<% end %>

@@ -34,7 +34,7 @@ CREATE TABLE jobtitles (
 
 CREATE TABLE shifts (
   id SERIAL8 PRIMARY KEY,
-  label VARCHAR(255) NOT NULL UNIQUE,
+  label VARCHAR(255) NOT NULL,
   shiftdate DATE,
   shiftstarttime TIME,
   shiftendtime TIME,

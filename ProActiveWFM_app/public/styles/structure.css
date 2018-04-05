@@ -1,26 +1,28 @@
 body {
-  background: grey url('/images/main_background1.jpg');
+  background: grey url('/images/main_bgrnd_1.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   color: black;
   font-family: 'sans-serif', serif;
   padding: 0px;
   margin: 0px;
+  font color: auto;
 }
 
 
 
 
 h1 {
-  font-size: 1.8em;
+  font-size: 2em;
   color: blue;
   margin-bottom: auto;
   font-style: italic;
 }
 
 a, a:link, a:visited {
-  color: #a2937e;
-  text-decoration: none;
+  color: black;
+  text-decoration:  underline;
+  font-size: 1.5em;
 }
 
 a:hover, a:active, a:focus {
@@ -36,6 +38,7 @@ nav {
 nav ul li {
   margin-bottom: 15px;
   text-transform: uppercase;
+  color: black
 }
 
 ul {

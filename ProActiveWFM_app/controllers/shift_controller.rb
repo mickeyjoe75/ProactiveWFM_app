@@ -17,3 +17,8 @@ post '/shifts' do
   shift.save
     redirect to("/shifts/new")
 end
+
+get '/shifts/index' do
+  @shifts = Shift.all()
+  erb(:"shifts/index")
+end

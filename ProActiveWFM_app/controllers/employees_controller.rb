@@ -19,8 +19,12 @@ post '/employees' do
 end
 
 
+get '/employees/index' do
+  @employees = Employee.all()
+  erb(:"employees/index")
+end
 
-# get '/employees/:id' do
-#   @employees = Employee.find(params['id'].to_i)
-#   erb(:"employees/show")
-# end
+get '/employees/show' do
+  @employees = Employee.all()
+  erb(:"employees/show")
+end
